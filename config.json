@@ -1,27 +1,174 @@
 {
+  "game_name": "XO CHAMPIONS PRO",
+  "version": "3.5",
+  
   "theme_settings": {
     "background": "#E8F5E9",
     "primary": "#2E7D32",
+    "secondary": "#388E3C",
     "accent": "#4CAF50",
     "text_color": "#1B5E20",
-    "board_color": "#C8E6C9",
-    "button_enabled": true,
-    "tournament_button_color": "#4CAF50",
-    "tournament_button_hover": "#388E3C"
+    "x_color": "#1B5E20",
+    "o_color": "#4CAF50",
+    "tournament_color": "#4CAF50",
+    "shop_color": "#9C27B0",
+    "champion_color": "#FFC107",
+    "ad_color": "#FF5722"
   },
+  
+  "tournament": {
+    "enabled": true,
+    "name": "Daily Tournament",
+    "description": "Kalahkan semua bot untuk menjadi juara!",
+    "rounds": 3,
+    "bots_per_round": [2, 2, 3],
+    "total_bots": 7,
+    "difficulty_levels": ["Easy", "Medium", "Hard", "Expert"],
+    
+    "prize_settings": {
+      "prize_per_win": 50,
+      "round_1_multiplier": 1,
+      "round_2_multiplier": 2,
+      "final_multiplier": 3,
+      "championship_prize": 500,
+      "consolation_prize": 50
+    },
+    
+    "round_titles": {
+      "round_1": "Qualifier Round",
+      "round_2": "Semi Final",
+      "final": "Championship Final"
+    },
+    
+    "requirements": {
+      "min_wins_round1": 2,
+      "min_wins_round2": 2,
+      "min_wins_final": 3,
+      "time_limit": 300,
+      "max_moves": 50
+    }
+  },
+  
+  "shop": {
+    "enabled": true,
+    "starting_coins": 100,
+    "daily_bonus": 50,
+    
+    "items": [
+      {
+        "id": 1,
+        "name": "Power Booster",
+        "price": 50,
+        "description": "Double win coins for 5 games",
+        "effect": "double_coins"
+      },
+      {
+        "id": 2,
+        "name": "Extra Time",
+        "price": 30,
+        "description": "Add 30 seconds per move",
+        "effect": "extra_time"
+      },
+      {
+        "id": 3,
+        "name": "AI Difficulty Reducer",
+        "price": 100,
+        "description": "Reduce AI difficulty for 3 games",
+        "effect": "reduce_ai"
+      },
+      {
+        "id": 4,
+        "name": "Hint Assistant",
+        "price": 75,
+        "description": "Get hints for best moves",
+        "effect": "hints"
+      },
+      {
+        "id": 5,
+        "name": "Rainbow Theme Pack",
+        "price": 200,
+        "description": "Unlock rainbow color effects",
+        "effect": "rainbow_theme"
+      },
+      {
+        "id": 6,
+        "name": "Tournament Entry Pass",
+        "price": 150,
+        "description": "Free tournament entry",
+        "effect": "free_tournament"
+      }
+    ]
+  },
+  
+  "champion_rewards": {
+    "trophy_name": "Golden XO Trophy",
+    "badge_colors": ["#FFD700", "#FFC107", "#FF9800"],
+    "special_prizes": {
+      "first_place": 1000,
+      "second_place": 500,
+      "third_place": 250
+    },
+    "achievements": [
+      "First Win",
+      "Tournament Champion",
+      "Perfect Score",
+      "Speed Runner",
+      "Master Strategist"
+    ]
+  },
+  
+  "game_settings": {
+    "board_sizes": [3, 4],
+    "default_size": 3,
+    "bot_levels": ["Easy", "Medium", "Hard"],
+    "default_difficulty": "Medium",
+    "winning_combinations": 3,
+    "allow_diagonals": true,
+    "enable_animations": true,
+    "enable_sounds": true
+  },
+  
+  "win_rewards": {
+    "win_vs_player": 10,
+    "win_vs_ai_easy": 15,
+    "win_vs_ai_medium": 20,
+    "win_vs_ai_hard": 30,
+    "draw_reward": 5,
+    "streak_bonus": 5
+  },
+  
   "features": {
     "tournament_mode": true,
-    "tournament_enabled": true,
-    "tournament_link": "tournament.html",
-    "tournament_button_text": "START TOURNAMENT"
+    "shop_system": true,
+    "champion_board": true,
+    "daily_challenges": true,
+    "achievements": true,
+    "multiplayer": false,
+    "online_leaderboard": false,
+    "custom_themes": true
   },
-  "tournament": {
-    "html_file": "tournament.html",
-    "button_id": "tournament-btn",
-    "clickable": true,
-    "redirect": true
-  },
+  
   "ads": {
-    "message": "Tournament mode now available! Click START TOURNAMENT!"
+    "enabled": true,
+    "title": "🎉 SPECIAL OFFER!",
+    "message": "Double tournament prizes this week! Play now!",
+    "display_time": 10,
+    "type": "info"
+  },
+  
+  "social": {
+    "share_message": "I just won the XO Tournament! Can you beat my score?",
+    "highscore_prefix": "🏆 My XO Score: "
+  },
+  
+  "maintenance": {
+    "under_maintenance": false,
+    "message": "Server maintenance in progress...",
+    "estimated_time": "30 minutes"
+  },
+  
+  "version_info": {
+    "last_updated": "2024-12-20",
+    "changelog": "Added tournament system, shop, champion rewards"
   }
-}
+      }
