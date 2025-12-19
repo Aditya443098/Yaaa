@@ -1,13 +1,22 @@
 {
   "theme_settings": {
-    "background": "#5D4037",
-    "primary": "#795548",
-    "accent": "#D7CCC8"
+    "background": "#E8F5E9",
+    "primary": "#2E7D32",
+    "accent": "#4CAF50",
+    "text_color": "#1B5E20",
+    "board_color": "#C8E6C9",
+    "x_color": "#1B5E20",
+    "o_color": "#4CAF50",
+    "button_color": "#388E3C"
   },
   "features": {
-    "tournament_mode": true
+    "tournament_mode": true,
+    "sound_effects": true,
+    "animations": true
   },
   "ads": {
-    "message": "Tournament mode now available!"
+    "message": "Tournament mode now available!",
+    "color": "#4CAF50",
+    "background": "#F1F8E9"
   }
 }
