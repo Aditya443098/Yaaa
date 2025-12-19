@@ -1,174 +1,234 @@
 {
-  "game_name": "XO CHAMPIONS PRO",
-  "version": "3.5",
+  "game_name": "XO BOT CHALLENGE",
+  "version": "4.0",
   
   "theme_settings": {
-    "background": "#E8F5E9",
-    "primary": "#2E7D32",
-    "secondary": "#388E3C",
+    "background": "#0A0E17",
+    "primary": "#1A1F2C",
+    "secondary": "#252A3A",
     "accent": "#4CAF50",
-    "text_color": "#1B5E20",
-    "x_color": "#1B5E20",
-    "o_color": "#4CAF50",
-    "tournament_color": "#4CAF50",
+    "text_color": "#FFFFFF",
+    "x_color": "#4CAF50",
+    "o_color": "#FF5722",
+    "tournament_color": "#FF5722",
     "shop_color": "#9C27B0",
     "champion_color": "#FFC107",
-    "ad_color": "#FF5722"
+    "difficulty_hard": "#F44336"
   },
   
   "tournament": {
     "enabled": true,
-    "name": "Daily Tournament",
-    "description": "Kalahkan semua bot untuk menjadi juara!",
-    "rounds": 3,
-    "bots_per_round": [2, 2, 3],
-    "total_bots": 7,
-    "difficulty_levels": ["Easy", "Medium", "Hard", "Expert"],
+    "name": "HARD BOT CHALLENGE",
+    "description": "Hadapi 5 Bot Level Hard sekaligus!",
+    "mode": "bot_challenge",
+    "difficulty": "hard",
     
-    "prize_settings": {
-      "prize_per_win": 50,
-      "round_1_multiplier": 1,
-      "round_2_multiplier": 2,
-      "final_multiplier": 3,
-      "championship_prize": 500,
-      "consolation_prize": 50
+    "challenge_structure": {
+      "total_challenges": 5,
+      "bots": [
+        {
+          "name": "Alpha Bot",
+          "difficulty": "hard",
+          "strategy": "aggressive",
+          "win_rate": 85,
+          "reward": 100
+        },
+        {
+          "name": "Beta Bot",
+          "difficulty": "hard", 
+          "strategy": "defensive",
+          "win_rate": 80,
+          "reward": 120
+        },
+        {
+          "name": "Gamma Bot",
+          "difficulty": "hard",
+          "strategy": "balanced",
+          "win_rate": 90,
+          "reward": 150
+        },
+        {
+          "name": "Delta Bot", 
+          "difficulty": "very_hard",
+          "strategy": "adaptive",
+          "win_rate": 95,
+          "reward": 200
+        },
+        {
+          "name": "Omega Bot",
+          "difficulty": "expert",
+          "strategy": "perfect",
+          "win_rate": 99,
+          "reward": 300
+        }
+      ]
     },
     
-    "round_titles": {
-      "round_1": "Qualifier Round",
-      "round_2": "Semi Final",
-      "final": "Championship Final"
+    "rules": {
+      "wins_required": 3,
+      "time_per_move": 20,
+      "max_games": 10,
+      "retry_limit": 3,
+      "streak_bonus": true
     },
     
-    "requirements": {
-      "min_wins_round1": 2,
-      "min_wins_round2": 2,
-      "min_wins_final": 3,
-      "time_limit": 300,
-      "max_moves": 50
+    "rewards": {
+      "per_bot_defeat": 200,
+      "streak_bonus": 50,
+      "all_bots_defeated": 1000,
+      "perfect_score": 500,
+      "speed_bonus": 100
+    },
+    
+    "leaderboard": {
+      "enabled": true,
+      "min_wins": 3,
+      "update_interval": 60
+    }
+  },
+  
+  "bot_ai": {
+    "hard": {
+      "difficulty": "hard",
+      "minimax_depth": 5,
+      "win_chance": 85,
+      "response_time": 1000,
+      "strategies": ["defensive", "offensive", "balanced"],
+      "learning": true,
+      "adaptation_rate": 0.3
+    },
+    
+    "very_hard": {
+      "difficulty": "very_hard",
+      "minimax_depth": 7,
+      "win_chance": 95,
+      "response_time": 800,
+      "strategies": ["adaptive", "predictive", "counter"],
+      "learning": true,
+      "adaptation_rate": 0.5
+    },
+    
+    "expert": {
+      "difficulty": "expert",
+      "minimax_depth": 9,
+      "win_chance": 99,
+      "response_time": 500,
+      "strategies": ["perfect", "unbeatable", "master"],
+      "learning": true,
+      "adaptation_rate": 0.7
     }
   },
   
   "shop": {
     "enabled": true,
-    "starting_coins": 100,
-    "daily_bonus": 50,
-    
-    "items": [
+    "hard_mode_items": [
       {
-        "id": 1,
-        "name": "Power Booster",
-        "price": 50,
-        "description": "Double win coins for 5 games",
-        "effect": "double_coins"
+        "id": 101,
+        "name": "AI Pattern Revealer",
+        "price": 300,
+        "description": "Tunjukkan pola AI bot Hard",
+        "effect": "show_ai_pattern",
+        "duration": 3
       },
       {
-        "id": 2,
-        "name": "Extra Time",
-        "price": 30,
-        "description": "Add 30 seconds per move",
-        "effect": "extra_time"
+        "id": 102, 
+        "name": "Move Predictor",
+        "price": 250,
+        "description": "Prediksi gerakan bot Hard",
+        "effect": "predict_move",
+        "duration": 5
       },
       {
-        "id": 3,
-        "name": "AI Difficulty Reducer",
-        "price": 100,
-        "description": "Reduce AI difficulty for 3 games",
-        "effect": "reduce_ai"
+        "id": 103,
+        "name": "Time Freeze",
+        "price": 400,
+        "description": "Bekukan waktu 30 detik",
+        "effect": "freeze_time",
+        "uses": 3
       },
       {
-        "id": 4,
-        "name": "Hint Assistant",
-        "price": 75,
-        "description": "Get hints for best moves",
-        "effect": "hints"
+        "id": 104,
+        "name": "Bot Difficulty Reducer",
+        "price": 500,
+        "description": "Turunkan kesulitan bot 1 level",
+        "effect": "reduce_difficulty",
+        "duration": 2
       },
       {
-        "id": 5,
-        "name": "Rainbow Theme Pack",
-        "price": 200,
-        "description": "Unlock rainbow color effects",
-        "effect": "rainbow_theme"
-      },
-      {
-        "id": 6,
-        "name": "Tournament Entry Pass",
+        "id": 105,
+        "name": "Perfect Move Hint",
         "price": 150,
-        "description": "Free tournament entry",
-        "effect": "free_tournament"
+        "description": "Dapatkan hint move terbaik",
+        "effect": "perfect_hint",
+        "uses": 5
       }
     ]
   },
   
-  "champion_rewards": {
-    "trophy_name": "Golden XO Trophy",
-    "badge_colors": ["#FFD700", "#FFC107", "#FF9800"],
-    "special_prizes": {
-      "first_place": 1000,
-      "second_place": 500,
-      "third_place": 250
-    },
-    "achievements": [
-      "First Win",
-      "Tournament Champion",
-      "Perfect Score",
-      "Speed Runner",
-      "Master Strategist"
+  "achievements": {
+    "hard_mode": [
+      {
+        "id": "hm1",
+        "name": "Hard Mode Beginner",
+        "description": "Kalahkan 1 bot Hard",
+        "reward": 100,
+        "icon": "🥉"
+      },
+      {
+        "id": "hm2",
+        "name": "Hard Mode Warrior",
+        "description": "Kalahkan 3 bot Hard",
+        "reward": 300,
+        "icon": "🥈"
+      },
+      {
+        "id": "hm3",
+        "name": "Hard Mode Master",
+        "description": "Kalahkan 5 bot Hard",
+        "reward": 500,
+        "icon": "🥇"
+      },
+      {
+        "id": "hm4",
+        "name": "Perfect Victory",
+        "description": "Menang tanpa kalah vs bot Hard",
+        "reward": 1000,
+        "icon": "🏆"
+      },
+      {
+        "id": "hm5",
+        "name": "Speed Demon",
+        "description": "Kalahkan bot Hard dalam < 10 detik",
+        "reward": 800,
+        "icon": "⚡"
+      }
     ]
-  },
-  
-  "game_settings": {
-    "board_sizes": [3, 4],
-    "default_size": 3,
-    "bot_levels": ["Easy", "Medium", "Hard"],
-    "default_difficulty": "Medium",
-    "winning_combinations": 3,
-    "allow_diagonals": true,
-    "enable_animations": true,
-    "enable_sounds": true
-  },
-  
-  "win_rewards": {
-    "win_vs_player": 10,
-    "win_vs_ai_easy": 15,
-    "win_vs_ai_medium": 20,
-    "win_vs_ai_hard": 30,
-    "draw_reward": 5,
-    "streak_bonus": 5
   },
   
   "features": {
     "tournament_mode": true,
+    "hard_mode": true,
+    "bot_challenge": true,
     "shop_system": true,
-    "champion_board": true,
-    "daily_challenges": true,
     "achievements": true,
-    "multiplayer": false,
-    "online_leaderboard": false,
-    "custom_themes": true
+    "difficulty_settings": true,
+    "ai_learning": true
+  },
+  
+  "game_settings": {
+    "default_difficulty": "hard",
+    "bot_response_time": 1000,
+    "enable_hints": true,
+    "show_bot_stats": true,
+    "auto_save": true,
+    "winning_streak": true
   },
   
   "ads": {
     "enabled": true,
-    "title": "🎉 SPECIAL OFFER!",
-    "message": "Double tournament prizes this week! Play now!",
-    "display_time": 10,
-    "type": "info"
-  },
-  
-  "social": {
-    "share_message": "I just won the XO Tournament! Can you beat my score?",
-    "highscore_prefix": "🏆 My XO Score: "
-  },
-  
-  "maintenance": {
-    "under_maintenance": false,
-    "message": "Server maintenance in progress...",
-    "estimated_time": "30 minutes"
-  },
-  
-  "version_info": {
-    "last_updated": "2024-12-20",
-    "changelog": "Added tournament system, shop, champion rewards"
+    "title": "🔥 HARD MODE CHALLENGE!",
+    "message": "Hadapi 5 bot Hard dengan hadiah total 1000 koin!",
+    "button_text": "TERIMA TANTANGAN",
+    "color": "#F44336"
   }
-      }
+  }
