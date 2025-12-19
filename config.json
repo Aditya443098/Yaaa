@@ -1,0 +1,16 @@
+{
+  "game_name": "XO Game",
+  "version": "1.0",
+  "theme_settings": {
+    "background": "#5D4037",
+    "primary": "#795548",
+    "text": "#FFFFFF"
+  },
+  "settings": {
+    "board_sizes": [3, 4],
+    "sound": true
+  },
+  "features": {
+    "sound_effects": true
+  }
+}
