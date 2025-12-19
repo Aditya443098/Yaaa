@@ -1,41 +1,54 @@
 {
-  "game_name": "XO Game Pro",
-  "version": "1.0",
+  "game_name": "Game XO Ultimate",
+  "version": "2.0",
   
   "theme_settings": {
+    "name": "modern dark",
     "background": "#1a1a2e",
     "primary": "#16213e",
     "secondary": "#0f3460",
     "text": "#ffffff",
     "accent": "#4ecca3",
     "x_color": "#ff9a76",
-    "o_color": "#a7c5eb"
+    "o_color": "#a7c5eb",
+    "ad_color": "#ff5722"
   },
   
   "settings": {
-    "board_sizes": [3, 4],
-    "bot_levels": ["mudah", "normal", "sulit"],
+    "board_sizes": [3, 4, 5],
+    "bot_levels": ["mudah", "normal", "sulit", "expert"],
+    "available_themes": ["dark", "light", "blue", "green", "purple"],
     "sound": true
   },
   
   "features": {
     "sound_effects": true,
     "animations": true,
-    "dark_mode": true
+    "dark_mode": true,
+    "statistics": true,
+    "achievements": false,
+    "leaderboard": false,
+    "multiplayer": false,
+    "tournament_mode": false
   },
   
   "ads": {
     "enabled": true,
-    "title": "Special Offer",
-    "message": "Upgrade to Premium version!",
+    "title": "Special Announcement",
+    "message": "New features coming soon! Stay tuned!",
     "color": "#ff5722",
-    "duration": 10
+    "duration": 15
   },
   
   "update": {
-    "title": "Welcome!",
-    "message": "XO Game Pro is now live!"
+    "title": "🎉 Welcome to v2.0!",
+    "message": "Enjoy the new features and improved design!",
+    "enabled": true,
+    "notify": true
   },
+  
+  "maintenance": false,
+  "maintenance_message": "Game is undergoing maintenance. Please check back later.",
   
   "bug_report": {
     "enabled": true,
