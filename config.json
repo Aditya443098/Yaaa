@@ -1,16 +1,44 @@
 {
-  "game_name": "XO Game",
+  "game_name": "XO Game Pro",
   "version": "1.0",
+  
   "theme_settings": {
-    "background": "#5D4037",
-    "primary": "#795548",
-    "text": "#FFFFFF"
+    "background": "#1a1a2e",
+    "primary": "#16213e",
+    "secondary": "#0f3460",
+    "text": "#ffffff",
+    "accent": "#4ecca3",
+    "x_color": "#ff9a76",
+    "o_color": "#a7c5eb"
   },
+  
   "settings": {
     "board_sizes": [3, 4],
+    "bot_levels": ["mudah", "normal", "sulit"],
     "sound": true
   },
+  
   "features": {
-    "sound_effects": true
+    "sound_effects": true,
+    "animations": true,
+    "dark_mode": true
+  },
+  
+  "ads": {
+    "enabled": true,
+    "title": "Special Offer",
+    "message": "Upgrade to Premium version!",
+    "color": "#ff5722",
+    "duration": 10
+  },
+  
+  "update": {
+    "title": "Welcome!",
+    "message": "XO Game Pro is now live!"
+  },
+  
+  "bug_report": {
+    "enabled": true,
+    "email": "support@xogame.com"
   }
 }
