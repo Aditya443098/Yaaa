@@ -5,82 +5,23 @@
     "accent": "#4CAF50",
     "text_color": "#1B5E20",
     "board_color": "#C8E6C9",
-    "x_color": "#1B5E20",
-    "o_color": "#4CAF50",
-    "button_color": "#388E3C"
+    "button_enabled": true,
+    "tournament_button_color": "#4CAF50",
+    "tournament_button_hover": "#388E3C"
   },
   "features": {
     "tournament_mode": true,
-    "sound_effects": true,
-    "animations": true
+    "tournament_enabled": true,
+    "tournament_link": "tournament.html",
+    "tournament_button_text": "START TOURNAMENT"
   },
   "tournament": {
-    "mode": "bot_challenge",
-    "total_bots": 7,
-    "difficulty_levels": ["easy", "medium", "hard", "expert"],
-    "win_requirement": 2,
-    "structure": [
-      {
-        "round": "Round 1",
-        "opponents": 4,
-        "difficulty": "easy",
-        "wins_needed": 2
-      },
-      {
-        "round": "Round 2",
-        "opponents": 2,
-        "difficulty": "medium",
-        "wins_needed": 2
-      },
-      {
-        "round": "Semifinal",
-        "opponents": 1,
-        "difficulty": "hard",
-        "wins_needed": 3
-      },
-      {
-        "round": "Final",
-        "opponents": 1,
-        "difficulty": "expert",
-        "wins_needed": 3
-      }
-    ],
-    "rules": {
-      "points_to_win": 3,
-      "time_per_move": 30,
-      "champion_requirement": "Beat all 7 bots"
-    },
-    "rewards": {
-      "complete_all": "Champion Trophy",
-      "reach_semifinal": "Silver Medal",
-      "reach_final": "Gold Medal"
-    }
-  },
-  "bot_ai": {
-    "easy": {
-      "win_rate": 30,
-      "strategy": "random",
-      "reaction_time": 2000
-    },
-    "medium": {
-      "win_rate": 50,
-      "strategy": "defensive",
-      "reaction_time": 1500
-    },
-    "hard": {
-      "win_rate": 70,
-      "strategy": "offensive",
-      "reaction_time": 1000
-    },
-    "expert": {
-      "win_rate": 90,
-      "strategy": "minimax",
-      "reaction_time": 500
-    }
+    "html_file": "tournament.html",
+    "button_id": "tournament-btn",
+    "clickable": true,
+    "redirect": true
   },
   "ads": {
-    "message": "Tournament mode now available! Battle against 7 AI bots!",
-    "color": "#4CAF50",
-    "background": "#F1F8E9"
+    "message": "Tournament mode now available! Click START TOURNAMENT!"
   }
 }
