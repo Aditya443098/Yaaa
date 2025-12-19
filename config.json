@@ -1,35 +1,13 @@
 {
-  "game_name": "XO Game Pro",
-  "version": "2.0",
-  
   "theme_settings": {
-    "background": "#1a1a2e",
-    "primary": "#16213e",
-    "secondary": "#0f3460",
-    "text": "#ffffff",
-    "accent": "#4ecca3",
-    "x_color": "#ff9a76",
-    "o_color": "#a7c5eb"
+    "background": "#5D4037",
+    "primary": "#795548",
+    "accent": "#D7CCC8"
   },
-  
-  "settings": {
-    "board_sizes": [3, 4],
-    "bot_levels": ["mudah", "normal", "sulit"],
-    "sound": true
-  },
-  
   "features": {
-    "sound_effects": true,
-    "animations": true,
-    "dark_mode": true,
-    "statistics": true
+    "tournament_mode": true
   },
-  
   "ads": {
-    "enabled": true,
-    "title": "🔥 UPDATE AKAN TIBA",
-    "message": "Fitur baru sedang dipersiapkan!",
-    "color": "#FF5722",
-    "duration": 10
+    "message": "Tournament mode now available!"
   }
 }
