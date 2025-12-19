@@ -1,206 +1,141 @@
 {
-  "game_name": "XO BOT CHALLENGE",
-  "version": "4.0",
+  "game_name": "XO RED WARRIOR",
+  "version": "5.0",
   
   "theme_settings": {
-    "background": "#0A0E17",
-    "primary": "#1A1F2C",
-    "secondary": "#252A3A",
-    "accent": "#4CAF50",
+    "background": "#1A0000",
+    "primary": "#400000",
+    "secondary": "#660000",
+    "accent": "#FF3333",
     "text_color": "#FFFFFF",
-    "x_color": "#4CAF50",
-    "o_color": "#FF5722",
-    "tournament_color": "#FF5722",
-    "shop_color": "#9C27B0",
-    "champion_color": "#FFC107",
-    "difficulty_hard": "#F44336"
+    "x_color": "#FF3333",
+    "o_color": "#FF6666",
+    "tournament_color": "#FF0000",
+    "shop_color": "#CC0000",
+    "champion_color": "#FFD700",
+    "difficulty_hard": "#990000",
+    
+    /* WARNA TAMBAHAN MERAH */
+    "button_bg": "#FF3333",
+    "button_hover": "#CC0000",
+    "cell_bg": "#330000",
+    "cell_border": "#660000",
+    "win_color": "#FF9900",
+    "header_bg": "#260000",
+    "sidebar_bg": "#330000"
   },
   
   "tournament": {
     "enabled": true,
-    "name": "HARD BOT CHALLENGE",
-    "description": "Hadapi 5 Bot Level Hard sekaligus!",
+    "name": "RED WARRIOR CHALLENGE",
+    "description": "Tantangan bot Hard dengan tema merah menyala!",
     "mode": "bot_challenge",
     "difficulty": "hard",
     
     "challenge_structure": {
       "total_challenges": 5,
+      "theme": "red_warrior",
       "bots": [
         {
-          "name": "Alpha Bot",
+          "name": "Red Alpha",
           "difficulty": "hard",
           "strategy": "aggressive",
-          "win_rate": 85,
-          "reward": 100
-        },
-        {
-          "name": "Beta Bot",
-          "difficulty": "hard", 
-          "strategy": "defensive",
-          "win_rate": 80,
-          "reward": 120
-        },
-        {
-          "name": "Gamma Bot",
-          "difficulty": "hard",
-          "strategy": "balanced",
-          "win_rate": 90,
+          "color": "#FF0000",
           "reward": 150
         },
         {
-          "name": "Delta Bot", 
-          "difficulty": "very_hard",
-          "strategy": "adaptive",
-          "win_rate": 95,
-          "reward": 200
+          "name": "Crimson Beta",
+          "difficulty": "hard", 
+          "strategy": "defensive",
+          "color": "#CC0000",
+          "reward": 180
         },
         {
-          "name": "Omega Bot",
+          "name": "Scarlet Gamma",
+          "difficulty": "hard",
+          "strategy": "balanced",
+          "color": "#990000",
+          "reward": 220
+        },
+        {
+          "name": "Ruby Delta", 
+          "difficulty": "very_hard",
+          "strategy": "adaptive",
+          "color": "#660000",
+          "reward": 280
+        },
+        {
+          "name": "Blood Omega",
           "difficulty": "expert",
           "strategy": "perfect",
-          "win_rate": 99,
-          "reward": 300
+          "color": "#330000",
+          "reward": 350
         }
       ]
     },
     
     "rules": {
       "wins_required": 3,
-      "time_per_move": 20,
+      "time_per_move": 15,
       "max_games": 10,
-      "retry_limit": 3,
-      "streak_bonus": true
+      "retry_limit": 2,
+      "streak_bonus": true,
+      "theme": "red"
     },
     
     "rewards": {
-      "per_bot_defeat": 200,
-      "streak_bonus": 50,
-      "all_bots_defeated": 1000,
-      "perfect_score": 500,
-      "speed_bonus": 100
-    },
-    
-    "leaderboard": {
-      "enabled": true,
-      "min_wins": 3,
-      "update_interval": 60
-    }
-  },
-  
-  "bot_ai": {
-    "hard": {
-      "difficulty": "hard",
-      "minimax_depth": 5,
-      "win_chance": 85,
-      "response_time": 1000,
-      "strategies": ["defensive", "offensive", "balanced"],
-      "learning": true,
-      "adaptation_rate": 0.3
-    },
-    
-    "very_hard": {
-      "difficulty": "very_hard",
-      "minimax_depth": 7,
-      "win_chance": 95,
-      "response_time": 800,
-      "strategies": ["adaptive", "predictive", "counter"],
-      "learning": true,
-      "adaptation_rate": 0.5
-    },
-    
-    "expert": {
-      "difficulty": "expert",
-      "minimax_depth": 9,
-      "win_chance": 99,
-      "response_time": 500,
-      "strategies": ["perfect", "unbeatable", "master"],
-      "learning": true,
-      "adaptation_rate": 0.7
+      "per_bot_defeat": 250,
+      "streak_bonus": 75,
+      "all_bots_defeated": 1200,
+      "perfect_score": 600,
+      "speed_bonus": 150
     }
   },
   
   "shop": {
     "enabled": true,
-    "hard_mode_items": [
+    "theme": "red_shop",
+    
+    "red_theme_items": [
       {
-        "id": 101,
-        "name": "AI Pattern Revealer",
-        "price": 300,
-        "description": "Tunjukkan pola AI bot Hard",
-        "effect": "show_ai_pattern",
-        "duration": 3
+        "id": 201,
+        "name": "Red Power Boost",
+        "price": 350,
+        "description": "2x kekuatan di tema merah",
+        "effect": "red_power",
+        "color": "#FF0000"
       },
       {
-        "id": 102, 
-        "name": "Move Predictor",
-        "price": 250,
-        "description": "Prediksi gerakan bot Hard",
-        "effect": "predict_move",
-        "duration": 5
+        "id": 202, 
+        "name": "Crimson Time",
+        "price": 280,
+        "description": "Waktu ekstra 45 detik",
+        "effect": "extra_time",
+        "color": "#CC0000"
       },
       {
-        "id": 103,
-        "name": "Time Freeze",
-        "price": 400,
-        "description": "Bekukan waktu 30 detik",
-        "effect": "freeze_time",
-        "uses": 3
+        "id": 203,
+        "name": "Scarlet Shield",
+        "price": 450,
+        "description": "Proteksi dari bot merah",
+        "effect": "red_shield",
+        "color": "#990000"
       },
       {
-        "id": 104,
-        "name": "Bot Difficulty Reducer",
-        "price": 500,
-        "description": "Turunkan kesulitan bot 1 level",
-        "effect": "reduce_difficulty",
-        "duration": 2
+        "id": 204,
+        "name": "Ruby Vision",
+        "price": 380,
+        "description": "Lihat pola bot merah",
+        "effect": "red_vision",
+        "color": "#660000"
       },
       {
-        "id": 105,
-        "name": "Perfect Move Hint",
-        "price": 150,
-        "description": "Dapatkan hint move terbaik",
-        "effect": "perfect_hint",
-        "uses": 5
-      }
-    ]
-  },
-  
-  "achievements": {
-    "hard_mode": [
-      {
-        "id": "hm1",
-        "name": "Hard Mode Beginner",
-        "description": "Kalahkan 1 bot Hard",
-        "reward": 100,
-        "icon": "🥉"
-      },
-      {
-        "id": "hm2",
-        "name": "Hard Mode Warrior",
-        "description": "Kalahkan 3 bot Hard",
-        "reward": 300,
-        "icon": "🥈"
-      },
-      {
-        "id": "hm3",
-        "name": "Hard Mode Master",
-        "description": "Kalahkan 5 bot Hard",
-        "reward": 500,
-        "icon": "🥇"
-      },
-      {
-        "id": "hm4",
-        "name": "Perfect Victory",
-        "description": "Menang tanpa kalah vs bot Hard",
-        "reward": 1000,
-        "icon": "🏆"
-      },
-      {
-        "id": "hm5",
-        "name": "Speed Demon",
-        "description": "Kalahkan bot Hard dalam < 10 detik",
-        "reward": 800,
-        "icon": "⚡"
+        "id": 205,
+        "name": "Blood Fury",
+        "price": 550,
+        "description": "3x damage ke bot merah",
+        "effect": "blood_fury",
+        "color": "#330000"
       }
     ]
   },
@@ -208,27 +143,56 @@
   "features": {
     "tournament_mode": true,
     "hard_mode": true,
-    "bot_challenge": true,
+    "red_theme": true,
     "shop_system": true,
     "achievements": true,
-    "difficulty_settings": true,
-    "ai_learning": true
+    "animated_background": true,
+    "particle_effects": true
+  },
+  
+  "visual_effects": {
+    "red_particles": true,
+    "fire_animation": true,
+    "glow_effect": true,
+    "pulse_animation": true,
+    "color_transitions": true
   },
   
   "game_settings": {
     "default_difficulty": "hard",
-    "bot_response_time": 1000,
-    "enable_hints": true,
-    "show_bot_stats": true,
-    "auto_save": true,
-    "winning_streak": true
+    "theme": "red",
+    "enable_animations": true,
+    "enable_particles": true,
+    "sound_effects": true,
+    "red_theme_sounds": true
   },
   
   "ads": {
     "enabled": true,
-    "title": "🔥 HARD MODE CHALLENGE!",
-    "message": "Hadapi 5 bot Hard dengan hadiah total 1000 koin!",
-    "button_text": "TERIMA TANTANGAN",
-    "color": "#F44336"
+    "title": "🔥 RED WARRIOR MODE!",
+    "message": "Hadapi 5 bot merah dengan hadiah 1200 koin!",
+    "button_text": "LAWAN BOT MERAH",
+    "color": "#FF0000",
+    "background": "#330000"
+  },
+  
+  "achievements": {
+    "red_theme": [
+      {
+        "name": "Red Warrior",
+        "description": "Selesaikan 1 tantangan merah",
+        "reward": 200
+      },
+      {
+        "name": "Crimson Champion",
+        "description": "Kalahkan 3 bot merah",
+        "reward": 400
+      },
+      {
+        "name": "Scarlet Master",
+        "description": "Kalahkan semua 5 bot merah",
+        "reward": 800
+      }
+    ]
   }
-  }
+    }
